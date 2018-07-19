@@ -1,5 +1,6 @@
-<?php  if (count($errors) > 0) : ?>
-  <div class="error">
+<?php include "server.php"; ?> 
+<?php if (count($errors) > 0) : ?>
+  <div>
   	<?php foreach ($errors as $error) : ?>
   	  <p><?php echo $error ?></p>
   	<?php endforeach ?>

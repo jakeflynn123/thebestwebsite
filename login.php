@@ -10,8 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
 <body class="text-center">
     <nav class="navbar navbar-dark box-shadow">
-        <a href="index.php"><h1 class="col-lg-6">Home</h1></a>
-        <h1 class="col-lg-11">Welcome to the best website ever!</h1>
+        <h1 class="col-lg-12">Welcome to the best website ever!</h1>
         <!-- <a href="index.php"><h1 class="col-lg-4">Logout</h1></a> -->
     </nav>
 <div class="header">
@@ -21,6 +20,7 @@
         <section class="container">
             <div class="row">
                 <form action="login.php" method="post" class="form-signin col-lg-12">
+                    <?php include "errors.php"; ?>
                     <label for="inputEmail" class="sr-only">Email address</label>
                     <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>

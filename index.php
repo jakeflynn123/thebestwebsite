@@ -2,12 +2,12 @@
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "You must log in first";
-  	header('location: login.php');
+      $_SESSION['msg'] = "You must log in first";
+      header('location: login.php');
   }
   if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
+      session_destroy();
+      unset($_SESSION['username']);
       header("location: login.php");
       exit;
   }
@@ -22,29 +22,28 @@
 </head>
 <body class="text-center">
     <nav class="navbar navbar-dark box-shadow">
-        <a href="index.php"><h1 class="col-lg-6">Home</h1></a>
-        <h1 class="col-lg-11">Welcome to the best website ever!</h1>
+        <h1 class="col-lg-12">Welcome to the best website ever!</h1>
         <!-- <a href="index.php"><h1 class="col-lg-4">Logout</h1></a> -->
     </nav>
 
 <div class="header">
-	<h2>Home Page</h2>
+    <h2>Home Page</h2>
 </div>
 <div class="content">
-  	<?php if (isset($_SESSION['success'])) : ?>
+      <?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
-      	<h3>
+          <h3>
           <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
+              echo $_SESSION['success']; 
+              unset($_SESSION['success']);
           ?>
-      	</h3>
+          </h3>
       </div>
-  	<?php endif ?>
+      <?php endif ?>
 
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+        <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 
      <?php // Create connection
