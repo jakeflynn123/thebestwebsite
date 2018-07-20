@@ -15,8 +15,6 @@ if (isset($_POST['reg_user'])) {
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-    // $DBH = new PDO("mysql:host=$servername;dbname=$databasename", $user, $pass);
-
     if (empty($username)) {
         array_push($errors, "Username is required");
     }
@@ -43,7 +41,7 @@ if (isset($_POST['reg_user'])) {
             array_push($errors, "email already exists");
         }
     }
-    // echo 'errors ' . count($errors); 
+    // echo 'errors ' . count($errors);
     if (count($errors) == 0) {
         $password = md5($password_1);
 

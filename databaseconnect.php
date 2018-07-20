@@ -11,4 +11,6 @@ $db = new mysqli($servername, $username, $password, $databasename);
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
-?> 
+
+// Change over to PDO from mysqli
+// $DBH = new PDO("mysql:host=$servername;dbname=$databasename", $user, $pass);
