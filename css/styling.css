@@ -17,3 +17,26 @@ table, tbody, th, td {
 .progress {
     margin: 10px;
 }
+li {
+    border: 2px solid black;
+    list-style: none;
+    padding: 12px 16px 12px 16px;
+    margin: 4px;
+}
+ul#myList {
+    padding: 0;
+    display:table; 
+    margin:0 auto;
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: rgb(0, 250, 12);
+    color: rgb(0, 0, 0);
+    text-decoration: line-through;
+}
+/* Style the close button */
+.close {
+    right: 0;
+    top: 0;
+    padding: 4px 8px 4px 18px;
+}

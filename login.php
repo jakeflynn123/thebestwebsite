@@ -21,8 +21,8 @@
             <div class="row">
                 <form action="login.php" method="post" class="form-signin col-lg-12">
                     <?php include "errors.php"; ?>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputUsername" class="sr-only">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password" required>
                     <p>

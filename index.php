@@ -24,11 +24,10 @@ if (isset($_GET['logout'])) {
         <h1 class="col-lg-12">Welcome to the best website ever!</h1>
     <!-- <a href="index.php"><h1 class="col-lg-4">Logout</h1></a> -->
     </nav>
-
     <div class="header">
         <h2>Home Page</h2>
     </div>
-    <div class="content">
+    <div class="content container">
     <?php if (isset($_SESSION['success'])) : ?>
         <div class="error success" >
             <h3>
@@ -48,9 +47,9 @@ if (isset($_GET['logout'])) {
             <input type="text" id="toDo" placeholder="Title...">
             <button onclick="newToDo()" id="addToDoButton" class="addToDo">Add</button>
         </section>
-        <ul id="myList">
-        </ul> 
     </div>
+    <ul id="myList">
+    </ul> 
 </body>
 </html>
 <script sr/c="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
